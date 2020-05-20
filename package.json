@@ -19,11 +19,7 @@
     "eject": "react-scripts eject",
     "commit": "npx git-cz"
   },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
+  "husky": {},
   "eslintConfig": {
     "extends": "react-app"
   },
