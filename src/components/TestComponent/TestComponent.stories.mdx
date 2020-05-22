@@ -1,0 +1,21 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import TestComponent from './TestComponent.tsx';
+
+<Meta title="Test/TestComponent" component={TestComponent} />
+
+# Тест
+
+Тест `MDX` и `StoryBook`
+
+Стандартный вид
+
+<Story name="default">
+  <TestComponent message="Тест">Тест</TestComponent>
+</Story>
+
+Не стандартный вид
+
+<Story name="customColor">
+  <TestComponent message="Тест" color="red">Тест</TestComponent>
+</Story>
+
