@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview , Props } from '@storybook/addon-docs/blocks';
 import TestComponent from './TestComponent.tsx';
 
 <Meta title="Test/TestComponent" component={TestComponent} />
@@ -19,3 +19,4 @@ import TestComponent from './TestComponent.tsx';
   <TestComponent message="Тест" color="red">Тест</TestComponent>
 </Story>
 
+<Props of={TestComponent} />
