@@ -3,7 +3,7 @@ import GlobalStyle from './GlobalStyles'
 import Text from './components/TestComponent'
 import Counter from './components/TestComponent2';
 
-function App() {
+const App: React.SFC = () => {
   return (
     <>
       <Text message="kek" color="red" />

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const TestComponent2: React.FC<{ initValue?: number }> = ({ initValue = 5 }) => {
   const [count, setCount] = useState(initValue);
 
-  const incriment = () => {
+  const incriment = (): void => {
     setCount(count + 1)
   }
   return (
