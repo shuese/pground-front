@@ -7,7 +7,6 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
     "cra-template-typescript": "1.0.3",
-    "husky": "^4.2.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -21,7 +20,8 @@
     "eject": "react-scripts eject",
     "commit": "npx git-cz",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "analyze": "node scripts/analyze.js"
   },
   "husky": {},
   "eslintConfig": {
@@ -45,7 +45,9 @@
     "@storybook/preset-create-react-app": "^2.1.2",
     "@storybook/react": "^5.3.18",
     "cz-conventional-changelog": "3.2.0",
-    "typescript-plugin-styled-components": "^1.4.4"
+    "husky": "^4.2.5",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "webpack-bundle-analyzer": "^3.8.0"
   },
   "config": {
     "commitizen": {
