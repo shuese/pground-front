@@ -6,6 +6,7 @@ import Counter from './components/TestComponent2';
 const App: React.SFC = () => {
   return (
     <>
+      <Text message="Наелся и спит" />
       <Text message="kek" color="red" />
       <Counter />
       <Counter initValue={3} />
