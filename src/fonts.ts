@@ -10,6 +10,7 @@ export const fonts = css`
     src: local('Manrope Light'), local('Manrope-Light'), url(${manropeLight}) format('woff2');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -17,6 +18,7 @@ export const fonts = css`
     src: local('Manrope Regular'), local('Manrope-Regular'), url(${manropeRegular}) format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -24,6 +26,7 @@ export const fonts = css`
     src: local('Manrope Medium'), local('Manrope-Medium'), url(${manropeMedium}) format('woff2');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -31,5 +34,6 @@ export const fonts = css`
     src: local('Manrope Bold'), local('Manrope-Bold'), url(${manropeBold}) format('woff2');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
   }
 `
