@@ -1,66 +1,81 @@
 {
-  "name": "pg-front",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@sentry/browser": "^5.15.5",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.0",
-    "@typescript-eslint/eslint-plugin": "^3.0.0",
-    "@typescript-eslint/parser": "^3.0.0",
-    "cra-template-typescript": "1.0.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "sanitize.css": "^11.0.1",
-    "styled-components": "^5.1.0",
-    "typescript": "^3.9.2"
-  },
+  "name": "pground-front",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
     "commit": "npx git-cz",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "analyze": "node scripts/analyze.js"
-  },
-  "husky": {},
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@storybook/addon-docs": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/preset-create-react-app": "^2.1.2",
-    "@storybook/react": "^5.3.18",
-    "cz-conventional-changelog": "3.2.0",
-    "eslint-plugin-no-loops": "^0.3.0",
-    "eslint-plugin-optimize-regex": "^1.2.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react-hooks": "^4.0.2",
-    "eslint-plugin-sonarjs": "^0.5.0",
-    "husky": "^4.2.5",
-    "progress-bar-webpack-plugin": "^2.1.0",
-    "webpack-bundle-analyzer": "^3.8.0"
+    "build-storybook": "build-storybook -s public"
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./commitizen.js"
     }
+  },
+  "repository": "https://github.com/Kafkae/pground-front.git",
+  "author": "kafkae <villas1998@mail.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "@sentry/browser": "^5.15.5",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "fork-ts-checker-webpack-plugin": "^4.1.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sanitize.css": "^11.0.1",
+    "styled-components": "^5.1.1",
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.0",
+    "@babel/preset-env": "^7.10.0",
+    "@babel/preset-react": "^7.10.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@types/copy-webpack-plugin": "^6.0.0",
+    "@types/terser-webpack-plugin": "^3.0.0",
+    "@types/webpack-bundle-analyzer": "^3.8.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "css-loader": "^3.5.3",
+    "cz-conventional-changelog": "^3.2.0",
+    "cz-customizable": "^6.2.0",
+    "eslint": "^7.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-is": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.2",
+    "ts-loader": "^7.0.5",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }

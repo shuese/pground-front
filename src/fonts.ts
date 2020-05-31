@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
-import manropeLight from './assets/fonts/manrope/Manrope-Light.woff2';
-import manropeRegular from './assets/fonts/manrope/Manrope-Regular.woff2';
-import manropeMedium from './assets/fonts/manrope/Manrope-Medium.woff2';
-import manropeBold from './assets/fonts/manrope/Manrope-Bold.woff2';
+import manropeLight from './assets/Manrope-Light.woff2';
+import manropeRegular from './assets/Manrope-Regular.woff2';
+import manropeMedium from './assets/Manrope-Medium.woff2';
+import manropeBold from './assets/Manrope-Bold.woff2';
 
 export const fonts = css`
   @font-face {
