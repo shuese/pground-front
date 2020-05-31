@@ -43,7 +43,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(woff2|png|jpg|jpeg|svg|ico|woff2)$/,
+        test: /\.(woff2|png|jpg|jpeg|svg|woff2)$/,
         use: [
           {
             loader: 'url-loader',
@@ -58,6 +58,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: "./src/assets/favicon.ico"
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
