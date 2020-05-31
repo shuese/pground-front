@@ -1,5 +1,3 @@
-/// <reference types="react-scripts" />
-
 declare module '*.css' {
   interface ClassNames {
     [className: string]: string;
