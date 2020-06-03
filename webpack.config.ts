@@ -4,6 +4,8 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
+import WebpackPwaManifest from 'webpack-pwa-manifest'
+import WorkboxPlugin from 'workbox-webpack-plugin'
 
 const devMode = process.env.NODE_ENV !== 'production'
 
@@ -49,6 +51,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8192,
+              name: "assets/[hash].[ext]"
             },
           },
         ],
@@ -58,11 +61,42 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: "./src/assets/favicon.ico"
+      favicon: "./src/assets/favicon.ico",
+    }),
+    new WebpackPwaManifest({
+      name: "PG Frontend",
+      short_name: "PGF",
+      description: "Плацдарм для обучения и экспериментов.",
+      background_color: "#ffffff",
+      inject: true,
+      fingerprints: true,
+      ios: true,
+      crossorigin: undefined,
+      icons: [
+        {
+          src: path.resolve("./src/assets/logo512.png"),
+          sizes: [96, 128, 192, 256, 384, 512, 1024]
+        }
+      ]
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
+    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      offlineGoogleAnalytics: true,
+      skipWaiting: true,
+      navigateFallback: "index.html",
+      navigateFallbackDenylist: [
+        // Exclude URLs starting with /_, as they're likely an API call
+        new RegExp('^/_'),
+        // Exclude any URLs whose last part seems to be a file extension
+        // as they're likely a resource and not a SPA route.
+        // URLs containing a "?" character won't be blacklisted as they're likely
+        // a route with query params (e.g. auth callbacks).
+        new RegExp('/[^/?]+\\.[^/]+$')
+      ]
     }),
     new CleanWebpackPlugin(),
   ],
