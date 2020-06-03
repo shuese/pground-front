@@ -6,12 +6,15 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import WebpackPwaManifest from 'webpack-pwa-manifest'
 import WorkboxPlugin from 'workbox-webpack-plugin'
+import Dotenv from 'dotenv-webpack'
 
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   entry: './src/index',
-
+  node: {
+    fs: "empty"
+  },
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.[hash].js',
@@ -98,6 +101,7 @@ module.exports = {
         new RegExp('/[^/?]+\\.[^/]+$')
       ]
     }),
+    new Dotenv(),
     new CleanWebpackPlugin(),
   ],
 }
