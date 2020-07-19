@@ -5,8 +5,6 @@ import Text from './components/TestComponent';
 import Counter from './components/TestComponent2';
 import logo from './assets/logo192.png'
 
-const text = 'lelele';
-
 const App: React.SFC = () => {
   return (
     <>
