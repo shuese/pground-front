@@ -5,6 +5,7 @@ pages:
     script:
         - yarn install
         - yarn build
+        - echo $CI_PROJECT_DIR
     artifacts:
         paths:
             - build
