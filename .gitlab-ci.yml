@@ -6,6 +6,8 @@ pages:
         - yarn install
         - yarn build
         - echo $CI_PROJECT_DIR
+        - echo $CI_PROJECT_PATH_SLUG
+        - echo $CI_PROJECT_NAME	
     artifacts:
         paths:
             - build
