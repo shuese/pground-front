@@ -10,6 +10,6 @@ pages:
         - echo $CI_PROJECT_NAME	
     artifacts:
         paths:
-            - build
+            - public
     only:
         - master

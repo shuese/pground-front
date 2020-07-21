@@ -16,7 +16,7 @@ module.exports = {
     fs: "empty"
   },
   output: {
-    path: path.join(__dirname, '/build'),
+    path: path.join(__dirname, '/public'),
     filename: 'bundle.[hash].js',
   },
   optimization: {
